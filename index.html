@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+ <html>
+     <head>
+        <meta charset="utf-8">
+        <meta name="description" content="A little web app that I put together which takes a string of numbers and calculates the average, mode, median, range, sum as well as the minimum and maximum.">
+
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+         <style>
+         .container {   
+                 
+                border-radius: 10px inset #A1BD95;
+                background-color: #B0BBBF; 
+                max-height: auto;
+            }
+
+        .jumbotron { 
+
+                border: 2px solid #A9AEB0; 
+                background-color: #8CC2BE;
+                border-radius: 25px inset #A1BD95;
+                max-height: auto;
+
+            }
+            </style>
+        <title># Quick Calculator #</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+     </head>
+     <body>
+        
+        <audio id="audioImagePlay" style="display:none">
+            <source src="button.mp3" />
+        </audio>
+
+    <div class="container" style="width: 900px;">
+         <div style="width: auto; margin: auto; text-align: center;"><h1>Quick Calculator</h1><br /><img src="calc_icon.png" />
+         </div>
+     </div>
+     
+        <div class="container" style="width: 900px;">
+
+            <div class="jumbotron" style="background-image: url('metal.jpg'); border-radius: 10px;">
+
+    <ul class="list-group" style="text-align: center; margin: auto; width: 500px; border: 5px solid #B0BBBF; border-radius: 25px inset #A1BD95;">
+
+        <li class="list-group-item list-group-item-warning" style="background-color: #CBD4D6;">
+            <h3>Input values here</h3>
+        </li>
+        <li class="list-group-item list-group-item-success">
+            <input type="text" name="name" value="" id="input-id" placeholder="ex:1,2,3,4...">
+            </li>
+         <li class="list-group-item list-group-item-success">
+            <button type="button" name="button" id="average-button" style="width: 150px;">Return Average</button></li>
+         <li class="list-group-item list-group-item-success">
+            <button type="button" name="button" id="mode-button" style="width: 150px;">Return Mode</button>
+        </li>
+         <li class="list-group-item list-group-item-success">
+            <button type="button" name="button" id="sum-button" style="width: 150px;">Return Sum</button>
+        </li>
+         <li class="list-group-item list-group-item-success">
+            <button type="button" name="button" id="min-button" style="width: 150px;">Return Min</button>
+        </li>
+         <li class="list-group-item list-group-item-success">
+            <button type="button" name="button" id="max-button" style="width: 150px;">Return Max</button>
+        </li>
+         <li class="list-group-item list-group-item-success">
+            <button type="button" name="button" id="range-button" style="width: 150px;">Return Range</button>
+        </li>
+         <li class="list-group-item list-group-item-success">
+            <button type="button" name="button" id="median-button" style="width: 150px;">Return Median</button>
+        </li>
+         <li class="list-group-item list-group-item-warning" style="background-color: #CBD4D6;"><h4>Result</h4>
+         </li>
+         <li class="list-group-item list-group-item-success" style="background-color: #C1E8F5; border: 2px inset;">
+            <h3 id="result"></h3>
+         </li>
+          
+     </ul>
+
+         <br>
+     </div>
+     </div>
+        <script>
+    //get the button element and attach the onmouseover event handler to it. When mouse over fires execute function playAudio.
+    document.getElementById("average-button").addEventListener("click", playAudio, false);
+    document.getElementById("mode-button").addEventListener("click", playAudio, false);
+    document.getElementById("min-button").addEventListener("click", playAudio, false);
+    document.getElementById("max-button").addEventListener("click", playAudio, false);
+    document.getElementById("range-button").addEventListener("click", playAudio, false);
+    document.getElementById("median-button").addEventListener("click", playAudio, false);
+    document.getElementById("sum-button").addEventListener("click", playAudio, false);
+
+    function playAudio()
+    {
+       //get audio element and initiate play.
+       document.getElementById("audioImagePlay").play();
+    }
+    
+</script>
+ 
+         <script src="Stats.js"></script>
+        <script src="calc.js"></script>
+
+        
+    </body>
+</html>
